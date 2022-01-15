@@ -14,9 +14,13 @@
 		E342BE032793029E0069FF79 /* Lec25.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E342BE012793029E0069FF79 /* Lec25.xcdatamodeld */; };
 		E342BE052793029F0069FF79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E342BE042793029F0069FF79 /* Assets.xcassets */; };
 		E342BE082793029F0069FF79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E342BE062793029F0069FF79 /* LaunchScreen.storyboard */; };
+		FBAF6225AFF9A557775A736A /* Pods_Lec25.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 258BBE70BCE00E927D9A64AB /* Pods_Lec25.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		258BBE70BCE00E927D9A64AB /* Pods_Lec25.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lec25.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D8AE821520B5E44F94C9194 /* Pods-Lec25.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lec25.release.xcconfig"; path = "Target Support Files/Pods-Lec25/Pods-Lec25.release.xcconfig"; sourceTree = "<group>"; };
+		797484F383F177BEFE968054 /* Pods-Lec25.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lec25.debug.xcconfig"; path = "Target Support Files/Pods-Lec25/Pods-Lec25.debug.xcconfig"; sourceTree = "<group>"; };
 		E342BDF52793029E0069FF79 /* Lec25.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lec25.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E342BDF82793029E0069FF79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E342BDFA2793029E0069FF79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,17 +37,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBAF6225AFF9A557775A736A /* Pods_Lec25.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C2FB75A040C67CA466AE99A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				797484F383F177BEFE968054 /* Pods-Lec25.debug.xcconfig */,
+				5D8AE821520B5E44F94C9194 /* Pods-Lec25.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C8E1E80B2BE62B4EBA70FABD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				258BBE70BCE00E927D9A64AB /* Pods_Lec25.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E342BDEC2793029E0069FF79 = {
 			isa = PBXGroup;
 			children = (
 				E342BDF72793029E0069FF79 /* Lec25 */,
 				E342BDF62793029E0069FF79 /* Products */,
+				0C2FB75A040C67CA466AE99A /* Pods */,
+				C8E1E80B2BE62B4EBA70FABD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E342BE0C2793029F0069FF79 /* Build configuration list for PBXNativeTarget "Lec25" */;
 			buildPhases = (
+				A00554D994F5129EF02AC21F /* [CP] Check Pods Manifest.lock */,
 				E342BDF12793029E0069FF79 /* Sources */,
 				E342BDF22793029E0069FF79 /* Frameworks */,
 				E342BDF32793029E0069FF79 /* Resources */,
+				25E8413F39ED30C04F308C34 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -135,6 +162,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		25E8413F39ED30C04F308C34 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lec25/Pods-Lec25-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lec25/Pods-Lec25-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lec25/Pods-Lec25-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A00554D994F5129EF02AC21F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Lec25-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E342BDF12793029E0069FF79 /* Sources */ = {
@@ -288,6 +357,7 @@
 		};
 		E342BE0D2793029F0069FF79 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 797484F383F177BEFE968054 /* Pods-Lec25.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -316,6 +386,7 @@
 		};
 		E342BE0E2793029F0069FF79 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D8AE821520B5E44F94C9194 /* Pods-Lec25.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
